@@ -1,7 +1,4 @@
-import welcomePageHeader from '../support/pages/welcomePageHeader.js'
-import welcomePageBody from '../support/pages/welcomePageBody.js'
-import welcomePageFooteer from '../support/pages/welcomePageFooter.js'
-import customMethods from '../support/methods.js'
+import { welcomePageHeader, welcomePageBody, welcomePageFooteer, customMethods } from '../support/pages';
 
 describe('Hillel test suite', () => {
     beforeEach(() => {
