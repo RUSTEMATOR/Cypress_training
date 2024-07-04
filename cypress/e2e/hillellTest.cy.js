@@ -31,12 +31,12 @@ describe('Hillel test suite', () => {
     })
 
     it('Check body elements', () => {
-        customMethods.checkVisibility(welcomePageBody.doMoreText)
+        customMethods.checkVisibilityPlaceholder(welcomePageBody.doMoreText)
         customMethods.checkVisibility(welcomePageBody.descriptionBodyText)
         customMethods.CheckText(welcomePageBody.descriptionBodyText, welcomePageBody.descriptionBodyTextPlaceholder)
         customMethods.checkVisibility(welcomePageBody.signUpButton)
         customMethods.CheckText(welcomePageBody.signUpButton, welcomePageBody.signUpButtonText)
-        customMethods.checkVisibility(welcomePageBody.videoFrame)
+        customMethods.checkVisibilityXpath(welcomePageBody.videoFrame)
         customMethods.checkVisibility(welcomePageBody.fuelExpenses)
         customMethods.checkVisibility(welcomePageBody.instructionsAndManuals)
         customMethods.CheckText(welcomePageBody.instructionsAndManuals, welcomePageBody.instructionsAndManualsText)
@@ -46,10 +46,11 @@ describe('Hillel test suite', () => {
         customMethods.checkVisibility(welcomePageBody.logFuelExpenses)
         customMethods.CheckText(welcomePageBody.logFuelExpenses, welcomePageBody.logFuelExpensesText)
         customMethods.checkVisibility(welcomePageBody.fuelExpensesDescription)
+        customMethods.CheckText(welcomePageBody.fuelExpensesDescription, welcomePageBody.fuelExpensesDescriptionText)
+        customMethods.checkVisibility(welcomePageBody.fuelExpensesDescription)
     })
 
     it('Check footer elements', () => {
-        customMethods.checkVisibilityPlaceholder(welcomePageFooteer.contacts)
         customMethods.checkVisibility(welcomePageFooteer.facebookButton)
         customMethods.checkVisibility(welcomePageFooteer.telegramButton)
         customMethods.checkVisibility(welcomePageFooteer.youtubeButton)
@@ -63,7 +64,7 @@ describe('Hillel test suite', () => {
         customMethods.CheckText(welcomePageFooteer.copyright, welcomePageFooteer.copyrightText)
         customMethods.checkVisibility(welcomePageFooteer.copyrightDescription)
         customMethods.CheckText(welcomePageFooteer.copyrightDescription, welcomePageFooteer.copyrightDescriptionText)
-        customMethods.checkVisibility(welcomePageFooteer.logo)
+        customMethods.checkVisibilityXpath(welcomePageFooteer.logo)
     })  
 
 })

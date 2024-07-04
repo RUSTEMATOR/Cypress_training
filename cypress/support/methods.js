@@ -11,6 +11,10 @@ class CustomMethods{
         return cy.contains(selector).should('be.visible')
     }
     
+    checkVisibilityXpath(xpath){
+        return cy.xpath(xpath).should('be.visible')
+        
+    }
 } 
 
 const customMethods = new CustomMethods()

@@ -1,5 +1,4 @@
 class WelcomePageFooter {
-    contacts = "div[class='col-md-6 d-flex flex-column align-items-center align-items-md-start']"
 
     facebookButton = '.socials_icon.icon.icon-facebook'
 
@@ -25,7 +24,7 @@ class WelcomePageFooter {
 
     supporLinkText ='support@ithillel.ua'
 
-    copyrightText = '�� 2021 Hillel IT school'
+    copyrightText = '© 2021 Hillel IT school'
 
     copyrightDescriptionText = 'Hillel auto developed in Hillel IT school for educational purposes of QA courses.'
 

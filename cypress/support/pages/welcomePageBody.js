@@ -27,7 +27,9 @@ class WelcomePageBody{
 
     instructionsAndManualsDescriptionText = 'Watch over 100 instructions and repair your car yourself.'
 
-    logFuelExpensesText = 'Keep track of your replacement schedule and plan your vehicle maintenance expenses in advance.'
+    logFuelExpensesText = 'Log fuel expenses'
+
+    fuelExpensesDescriptionText = 'Keep track of your replacement schedule and plan your vehicle maintenance expenses in advance.'
 
     getDoMoreText(){
         return this.doMoreText
