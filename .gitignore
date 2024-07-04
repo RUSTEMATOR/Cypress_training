@@ -1,6 +1,8 @@
 # Node modules
 node_modules/
 
+.gitignore
+
 # Cypress artifacts
 cypress/screenshots/
 cypress/videos/
