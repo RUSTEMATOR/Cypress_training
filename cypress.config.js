@@ -2,7 +2,7 @@ const { defineConfig } = require("cypress");
 
 module.exports = defineConfig({
   numTestsKeptInMemory: 5,
-  retries: 3,
+  retries: 0,
   watchForFileChanges: false,
   pageLoadTimeout: 90000,
   viewportWidth: 1920,
