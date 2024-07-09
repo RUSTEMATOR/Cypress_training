@@ -29,53 +29,7 @@ class WelcomePageFooter {
     copyrightDescriptionText = 'Hillel auto developed in Hillel IT school for educational purposes of QA courses.'
 
 
-
-
-    getContacts = () => {
-        return cy.get(this.contacts)
-    }
-
-    getFacebookButton = () => {
-        return cy.get(this.facebookButton)
-    }
-
-    getTelegramButton = () => {
-        return cy.get(this.telegramButton)
-    }
-
-    getYoutubeButton = () => {
-        return cy.get(this.youtubeButton)
-    }
-
-    getInstagramButton = () => {
-        return cy.get(this.instagramButton)
-    }
-
-    getLinkedinButton = () => {
-        return cy.get(this.linkedinButton)
-    }
-
-    getIthillelLink = () => {
-        return cy.get(this.ithillelLink)
-    }
-
-    getSupporLink = () => {
-        return cy.get(this.supporLink)
-    }
-
-    getCopyright = () => {
-        return cy.get(this.copyright)
-    }
-
-    getCopyrightDescription = () => {
-        return cy.get(this.copyrightDescription)
-    }
-
-    getLogo = () => {
-        return cy.xpath(this.logo)
-    }
-
 }
 
-const welcomePageFooteer = new WelcomePageFooter()
-export default welcomePageFooteer
+const welcomePageFooter = new WelcomePageFooter()
+export default welcomePageFooter

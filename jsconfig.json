@@ -9,5 +9,5 @@
   },
   "include": [
     "cypress/**/*.js"
-, "cypress/support/pages/welcomePageHeader.js"  ]
+, "cypress/support/pages/welcomePageHeader.js", "cypress/support/pages/RegForm.mjs"  ]
 }

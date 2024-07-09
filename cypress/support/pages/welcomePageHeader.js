@@ -9,29 +9,6 @@ class WelcomePageHeader{
     guestButtonText = 'Guest log in'
     signInButtonText = 'Sign In'
 
-    getHillelLogo = () => {
-        return cy.get(this.hillelLogo)
-    }
-
-    getHomeButton = () => {
-        return cy.contains(this.homeButton)
-    }
-
-    getAboutButton = () => {
-        return cy.contains(this.aboutButton)
-    }
-
-    getContactsButton = () => {
-        return cy.contains(this.contactsButton)
-    }
-
-    getGuestButton = () => {
-        return cy.get(this.guestButton)
-    }
-
-    getSignInButton = () => {
-        return cy.get(this.signInButton)
-    }
 }
 
 

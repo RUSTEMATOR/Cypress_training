@@ -1,7 +1,7 @@
 const { defineConfig } = require("cypress");
 
 module.exports = defineConfig({
-  numTestsKeptInMemory: 5,
+  numTestsKeptInMemory: 40,
   retries: 0,
   watchForFileChanges: false,
   pageLoadTimeout: 90000,
@@ -9,6 +9,7 @@ module.exports = defineConfig({
   viewportHeight: 1080,
   screenshotsFolder: "/Users/rustemsamoilenko/Desktop/Cypress_training/cypress/screenshots",
   screenshotOnRunFailure: true,
+  
   
   e2e: {
     testIsolation: true,
