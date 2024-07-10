@@ -30,46 +30,6 @@ class WelcomePageBody{
     logFuelExpensesText = 'Log fuel expenses'
 
     fuelExpensesDescriptionText = 'Keep track of your replacement schedule and plan your vehicle maintenance expenses in advance.'
-
-    getDoMoreText(){
-        return this.doMoreText
-    }
-
-    getDescriptionBodyText(){
-        return this.descriptionBodyText
-    }
-
-    getSignUpButton(){
-        return this.signUpButton
-    }
-
-    getVideoFrame(){
-        return this.videoFrame
-    }
-
-    getFuelExpenses(){
-        return this.fuelExpenses
-    }
-
-    getInstructionsImage(){
-        return this.instructionsImage
-    }
-
-    getLogFuelExpenses(){
-        return this.logFuelExpenses
-    }
-
-    getInstructionsAndManuals(){
-        return this.instructionsAndManuals
-    }
-
-    getFuelExpensesDescription(){
-        return this.fuelExpensesDescription
-    }
-
-    getInstructionsAndManualsDescription(){
-        return this.instructionsAndManualsDescription
-    }
 }
 
 const welcomePageBody = new WelcomePageBody()
