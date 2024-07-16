@@ -16,8 +16,8 @@ module.exports = defineConfig({
       // implement node event listeners here"
     },
     specPattern: "cypress/e2e/**/*.{js,jsx,ts,tsx}",
-    baseUrl: "https://guest:welcome2qauto@qauto.forstudy.space",
-    login: 'userokyo67dzxa@roflan.com', 
+    baseUrl: "https://guest:welcome2qauto@qauto2.forstudy.space",
+    login: 'sobakakonia@gmail.com', 
     password: '193786Az()', 
     experimentalFetchPolyfill: true,
     supportFile: "cypress/support/e2e.js",
@@ -26,7 +26,5 @@ module.exports = defineConfig({
       mochaFile: 'results/my-test-output.xml',
       toConsole: true
     }
-  
-    
   },
 });

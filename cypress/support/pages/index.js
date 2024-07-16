@@ -3,7 +3,7 @@ import welcomePageBody from './welcomePageBody.js';
 import welcomePageFooter from './welcomePageFooter.js';
 import customMethods from '../methods.js';
 import regForm from './RegForm.mjs';
-import baseInfo from './Base';
+import baseInfo from './Base.mjs';
 import profile from './Profile';
 import loginForm from './LoginForm';
 
