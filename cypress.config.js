@@ -17,14 +17,17 @@ module.exports = defineConfig({
     },
     specPattern: "cypress/e2e/**/*.{js,jsx,ts,tsx}",
     baseUrl: "https://guest:welcome2qauto@qauto.forstudy.space",
-    login: 'userokyo67dzxa@roflan.com', 
-    password: '193786Az()', 
     experimentalFetchPolyfill: true,
     supportFile: "cypress/support/e2e.js",
     reporter: 'mochawesome',
     reporterOptions: {
       mochaFile: 'results/my-test-output.xml',
       toConsole: true
+    },
+
+    env: {
+      login: 'userokyo67dzxa@roflan.com', 
+      password: '193786Az()'
     }
   
     

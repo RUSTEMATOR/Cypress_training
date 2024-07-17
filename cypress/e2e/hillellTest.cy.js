@@ -1,8 +1,4 @@
-import { welcomePageHeader, welcomePageBody, welcomePageFooter, customMethods, regForm, baseInfo, profile, loginForm } from '../support/pages';
-import garage from '../support/pages/Garage';
-import expenses from '../support/pages/FuelExpenses';
-
-
+import { welcomePageHeader, welcomePageBody, welcomePageFooter, customMethods, regForm, baseInfo, profile, garage, expenses} from '../support/pages';
 
 
 // describe('Hillel basic test suite', () => {

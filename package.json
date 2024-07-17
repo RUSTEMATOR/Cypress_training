@@ -1,8 +1,8 @@
 {
   "scripts": {
     "cy:open": "cypress open",
-    "cy:start1": "npx cypress run --config-file cypress.config.js",
-    "cy:start2": "npx cypress run --config-file cypress.config.aqa2.js",
+    "cy:start1": "npx cypress open --config-file cypress.config.js",
+    "cy:start2": "npx cypress open --config-file cypress.config.aqa2.js",
     "open:report": "open mochawesome-report/mochawesome.html"
   },
   "devDependencies": {

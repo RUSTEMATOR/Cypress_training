@@ -7,8 +7,8 @@ class BaseInfo {
         passwordField: '#signinPassword',
         loginBtn: '.btn-primary',
         loginBtnText: 'Login',
-        login: Cypress.config('login'),
-        password: Cypress.config('password')
+        login: Cypress.env('login'),
+        password: Cypress.env('password')
     }
    
 }
