@@ -1,12 +1,18 @@
-import fs from 'fs'
+import garage from './pages/Garage';
+import expenses from './pages/FuelExpenses';
+
+
 class CustomMethods{
+    LogIn({ signInBtn, login, password, loginField, passwordField, loginBtn, loginBtnText }) {
+        cy.log('Sign In Button Selector:', signInBtn);
+        cy.log('Login Field Selector:', loginField);
+        cy.log('Password Field Selector:', passwordField);
+        cy.log('Login Button Selector:', loginBtn);
 
-
-    LogIn(signInBtn, login, password, loginField, passwordField, loginBtn){
-        cy.get(signInBtn).click({multiple: true});
+        cy.get(signInBtn).click({ multiple: true });
         cy.get(loginField).type(login);
-        cy.get(passwordField).type(password, {sensitive: true});
-        cy.contains(loginBtn).click({multiple: true, force: true});
+        cy.get(passwordField).type(password, { sensitive: true });
+        cy.get(loginBtn).contains(loginBtnText).click();
     }
 
     visitPage(page){
@@ -38,9 +44,19 @@ class CustomMethods{
         cy.get(selector).should('be.disabled')
         return this
     }
+
+    checkNotExist(selector){
+        cy.get(selector).should('not.exist')
+        return this
+    }
+
+    focusElementXpath(xpath){
+        cy.xpath(xpath).realHover('mouse')
+        return this
+    }
     
     clickOn(selector){
-        cy.get(selector).click()
+        cy.get(selector).first().click()
         return this
     }
 
@@ -99,6 +115,36 @@ class CustomMethods{
         cy.writeFile(filename, content + '\n', {flag: 'a+'});
     }
 
+    chooseRandomCar({carBrandField, carModelField, carMilageInput}) {
+        const randomCar = garage.getRandomCarData()
+        cy.get(carBrandField).select(randomCar.brand)
+        cy.get(carModelField).select(randomCar.model)
+        cy.get(carMilageInput).clear().type(randomCar.mileage)
+        return this
+    }
+
+    addFuelExpensesGarage({addFuelExpenseBtnGarage, expensesMilage, expensesTotalCost, expensesAddBtn, expensesLiters}) {
+        const randomValues = expenses.getRandomValues()
+
+        cy.get(addFuelExpenseBtnGarage).click()
+        cy.get(expensesMilage).type(randomValues.mileage)
+        cy.get(expensesLiters).type(randomValues.liters)
+        cy.get(expensesTotalCost).type(randomValues.totalCost)
+        cy.xpath(expensesAddBtn).click()
+        return this
+    }
+
+    addFuelExpensesTab({expensesTab, addExpensesBtn, expensesAddBtn, expensesLiters, expensesTotalCost, expensesMilage}){
+        const randomValues = expenses.getRandomValues()
+
+        customMethods.clickOnXpath(expensesTab)
+        customMethods.clickOn(addExpensesBtn)
+        cy.get(expensesMilage).type(randomValues.mileage) + 1
+        cy.get(expensesLiters).type(randomValues.liters)
+        cy.get(expensesTotalCost).type(randomValues.totalCost)
+        cy.xpath(expensesAddBtn).click()
+    }
+        
 }
 
 const customMethods = new CustomMethods()
