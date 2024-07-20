@@ -104,10 +104,10 @@ describe('API tests: creating, updating and deleting posts', () => {
         cy.api('POST', baseURL, newPost).as('newPost')
         cy.get('@newPost').then((response) => {
             expect(response.status).to.eq(201)
-            expect(response.body).to.have.property('userId', 11)
-            expect(response.body).to.have.property('id', 101)
-            expect(response.body).to.have.property('title', 'IDK')
-            expect(response.body).to.have.property('body', 'Whaaaaaat')
+            expect(response.body).to.have.property('userId', newPost.userId)
+            expect(response.body).to.have.property('id', newPost.id)
+            expect(response.body).to.have.property('title', newPost.title)
+            expect(response.body).to.have.property('body', newPost.body)
         })
     })
 
