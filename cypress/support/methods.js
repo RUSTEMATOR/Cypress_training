@@ -115,6 +115,13 @@ class CustomMethods{
         cy.writeFile(filename, content + '\n', {flag: 'a+'});
     }
 
+    chooseCar({carBrandField, carModelField, carMilageInput, brand, model, mileage}) {
+        cy.get(carBrandField).select(brand)
+        cy.get(carModelField).select(model)
+        cy.get(carMilageInput).clear().type(mileage)
+        return this
+    }
+
     chooseRandomCar({carBrandField, carModelField, carMilageInput}) {
         const randomCar = garage.getRandomCarData()
         cy.get(carBrandField).select(randomCar.brand)
